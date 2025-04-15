@@ -1,5 +1,6 @@
 const connection = require('../data/db')
 
+
 function index(req, res) {
 
     const sql = 'SELECT * FROM movies'
@@ -30,5 +31,7 @@ function show(req, res) {
 
     });
 };
+
+
 
 module.exports = { index, show }
