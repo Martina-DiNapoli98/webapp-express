@@ -1,3 +1,4 @@
+const connection = require('../data/db')
 
 function index(req, res) {
     res.json({ message: 'List of movies' })
