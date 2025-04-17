@@ -15,6 +15,9 @@ app.use(cors(
 ));
 app.use(express.json());
 app.use(express.static('public'));
+app.use(cors({
+    origin: "http://localhost:5173" // oppure il dominio del tuo front-end
+}));
 
 app.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`)
@@ -25,6 +28,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1/movies', moviesRouter);
+
+
 
 
 
